@@ -1,0 +1,23 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    align-content: center;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    align-content: center;
+  }
+  .example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://us.123rf.com/450wm/jirsak/jirsak1502/jirsak150200100/36983477-security-services-and-protection-concept-login-sign-in-concepts-businessman-offer-padlock-symbol-of-.jpg?ver=6');
+  background-size: cover;
+}

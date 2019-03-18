@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 import { UsersComponent } from './users/users.component';
 import { MatListModule } from '@angular/material/list';
-import { MatSnackBar, MatSnackBarModule, MatTableModule, MatSortModule, MatPaginatorModule, MatInputModule, MatSidenavModule, MatIconModule, MatToolbarModule } from '@angular/material';
+import { MatSnackBar, MatSnackBarModule, MatTableModule, MatSortModule, MatPaginatorModule, MatInputModule, MatSidenavModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatButtonModule, MatCardModule } from '@angular/material';
 import { OVERLAY_PROVIDERS } from '@angular/cdk/overlay';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
@@ -14,15 +14,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './users/user/user.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { DynamicGridComponent } from './dynamic-grid/dynamic-grid.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent, 
-   UsersComponent, UserComponent, EmployeesComponent, DynamicGridComponent
+   UsersComponent, UserComponent, EmployeesComponent, DynamicGridComponent, LoginComponent, HomeComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule, 
     MatListModule,
@@ -35,7 +39,10 @@ import { DynamicGridComponent } from './dynamic-grid/dynamic-grid.component';
     MatInputModule,
    MatSidenavModule,
    MatIconModule,
-   MatToolbarModule
+   MatToolbarModule,
+   MatFormFieldModule,
+   MatButtonModule,
+   MatCardModule
   ],
 
   entryComponents: [
