@@ -1,0 +1,35 @@
+
+<mat-form-field >
+    <input class="mat-form-field" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search using Id, First Name, Last Name or Phone">
+  </mat-form-field>
+<table mat-table [dataSource]='data' class="mat-elevation-z8" matSort matSortActive='id' matSortDirection='asc' matSortDisableClear >
+ 
+    <ng-container *ngFor='let column of columnNames' [matColumnDef]='column.dataField' >
+        <th mat-header-cell *matHeaderCellDef mat-sort-header [disabled]='!column.isSortable'> {{column.title}} </th>
+        <td mat-cell *matCellDef="let row">{{ row[column.dataField] }}</td>
+    </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+ <!--    <ng-container matColumnDef='id'>
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let user"> {{user.id}} </td>
+    </ng-container>
+    <ng-container matColumnDef='firstName'>
+        <th mat-header-cell *matHeaderCellDef> First Name </th>
+        <td mat-cell *matCellDef="let user"> {{user.firstName}} </td>
+    </ng-container>
+    <ng-container matColumnDef='lastName'>
+      <th mat-header-cell *matHeaderCellDef> Last Name </th>
+      <td mat-cell *matCellDef="let user"> {{user.lastName}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef='phone'>
+      <th mat-header-cell *matHeaderCellDef> Phone </th>
+      <td mat-cell *matCellDef="let user"> {{user.phone}} </td>
+    </ng-container> -->
+ 
