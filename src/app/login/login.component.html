@@ -1,0 +1,33 @@
+<!-- <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="User Name"  [(ngModel)]="userName" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="password" matInput placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)='authenticate()'>Login</button>
+  </div>
+</form>
+ -->
+ <mat-card class="example-card">
+    <form class="example-form" >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Sign in page</mat-card-title>
+      <mat-card-subtitle>Enter Username and Password to continue</mat-card-subtitle>
+    </mat-card-header>
+    Login User
+    <mat-card-content>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="User Name"  [(ngModel)]="userName" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input type="password" matInput placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button class="example-button-row" color="primary" (click)='authenticate()'>Login</button>
+    </mat-card-actions>
+  </form>
+  </mat-card>
